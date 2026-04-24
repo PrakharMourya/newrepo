@@ -1,0 +1,12 @@
+=== Inventory Report ===
+Central Storage
+Items: 3
+  Laptop [LAP-0010] $999.99 x5
+  Mouse [MOU-0020] $29.99 x50
+  Keyboard [KEY-0030] $79.99 x30
+Subtotal: $8899.15
+Total (with 8.5% tax): $9655.58
+
+Summary: Central Storage: 3 items, $8899.15
+Laptop with 10% discount: $899.99
+Clamped value: 100
