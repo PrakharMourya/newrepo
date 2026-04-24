@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
-SANFLAGS =
+SANFLAGS = -fsanitize=address
 
 OBJS = Item.o Warehouse.o PriceUtils.o Report.o
 

@@ -5,8 +5,7 @@
 #include <sstream>
 #include <iomanip>
 #include <cstddef>
-
-class Item;
+#include "Item.h"
 
 struct DiscountConfig {
     double percent;

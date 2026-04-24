@@ -13,7 +13,8 @@ Item::Item(const std::string& name, double price, int quantity,
 
 Item::Item(const Item& other)
     : name_(other.name_), price_(other.price_), quantity_(other.quantity_) {
-    std::strcpy(sku_, other.sku_);
+    std::strncpy(sku_, other.sku_, sizeof(sku_) - 1);
+    sku_[sizeof(sku_) - 1] = '\0';
     description_ = new char[std::strlen(other.description_) + 1];
     std::strcpy(description_, other.description_);
 }
@@ -23,8 +24,8 @@ Item& Item::operator=(const Item& other) {
         name_ = other.name_;
         price_ = other.price_;
         quantity_ = other.quantity_;
-        std::strcpy(sku_, other.sku_);
-
+        std::strncpy(sku_, other.sku_, sizeof(sku_) - 1);
+        sku_[sizeof(sku_) - 1] = '\0';
         delete[] description_;
         description_ = new char[std::strlen(other.description_) + 1];
         std::strcpy(description_, other.description_);
